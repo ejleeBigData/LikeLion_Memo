@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>멋쟁이사자처럼::메모장 수정</title>
+  <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+<body>
+  <h1>메모 수정</h1>
+
+  <form class="add-form" th:action="@{/edit}" method="post">
+    <input type="hidden" name="id" required th:value="${memo.id}"/>
+    <input type="text" name="title" required th:value="${memo.title}"/>
+    <br />
+    <textarea name="content" th:text="${memo.content}"></textarea>
+    <br />
+
+    <button type="button" onclick="location.href='/'">CANCEL</button>
+    <button type="submit">SAVE</button>
+  </form>
+</body>
+</html>
