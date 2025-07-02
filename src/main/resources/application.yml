@@ -1,7 +1,3 @@
 spring:
   application:
     name: memo_app
-  datasource:
-    url: jdbc:postgresql://localhost:5432/memo
-    username: idmemo
-    password: J@vaApp070!
